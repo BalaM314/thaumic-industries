@@ -10,9 +10,13 @@ public class VinteumOre extends OreBlock {
 	public VinteumOre(String name, Item ore) {
 		super(name, ore);
 		inEditor = true;
-		variants = 1;
-
+		variants = 0;
 		
+	}
+
+	@Override
+	public void load() {
+		super.load();
 	}
 
 	@Override
