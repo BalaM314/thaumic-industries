@@ -11,7 +11,7 @@ public class Items implements ContentList {
 	@Override
 	public void load() {
 		vinteum = new Item("vinteum", Color.valueOf("9b4bc5")) {{
-			hardness = 2;
+			hardness = 6;
 			cost = 1.0f;
 		}};
 		managlass = new Item("managlass", Color.valueOf("00eeff")) {{

@@ -1,9 +1,12 @@
 package balam314.magic.register;
 
+import balam314.magic.content.blocks.MagicCrafter;
 import balam314.magic.content.blocks.VinteumExtractor;
 import balam314.magic.content.blocks.VinteumOre;
+import mindustry.Vars;
 import mindustry.content.Fx;
 import mindustry.content.Items;
+import mindustry.content.UnitTypes;
 import mindustry.ctype.ContentList;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
@@ -15,7 +18,7 @@ import static mindustry.type.ItemStack.with;
 
 public class Blocks implements ContentList {
 
-	public static Block vinteumOre, vinteumExtractor, evaporator;
+	public static Block vinteumOre, vinteumExtractor, evaporator, infuser_t1;
 	
 	@Override
 	public void load() {
@@ -44,6 +47,21 @@ public class Blocks implements ContentList {
 
 			consumes.liquid(Liquids.vinteumSolution, 1f / 30f);
 		}};
+
+		infuser_t1 = new MagicCrafter("infuser-t1"){{
+			requirements(Category.crafting, with(Items.titanium, 40, Items.copper, 30, balam314.magic.register.Items.vinteum, 50, Items.metaglass, 35));
+			craftEffect = Fx.generatespark;
+			outputItem = new ItemStack(balam314.magic.register.Items.managlass, 1);
+			craftTime = 300f;
+			size = 2;
+			hasItems = true;
+			hasLiquids = false;
+
+			consumes.items(with(balam314.magic.register.Items.vinteum, 1, Items.metaglass, 2));
+		}};
+
+
+
 	}
 
 

@@ -1,6 +1,7 @@
 package balam314.magic.content.blocks;
 
 import arc.graphics.g2d.Draw;
+import mindustry.Vars;
 import mindustry.type.Item;
 import mindustry.world.Tile;
 import mindustry.world.blocks.environment.OreBlock;
